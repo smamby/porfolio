@@ -29,6 +29,7 @@ body {
     bottom: 0;
     left: 20%;
     mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
 }
 #face {
     opacity: 1;

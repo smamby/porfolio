@@ -2,6 +2,9 @@
     --primary: rgb(61, 5, 10);
     --secondary: rgb(247, 193, 143);
     --tertiary: rgb(63, 75, 238);
+    --cuarto: rgb(231, 123, 173);
+    --quinto: rgb(180, 211, 131);
+    --sexto: rgb(110, 186, 236);
 }
 * {
     margin: 0;
@@ -95,7 +98,10 @@ nav li {
     box-sizing: border-box;
 }
 nav li a {
+    display: block;
+    width: 100%;
     color: var(--tertiary);
+    text-align: center;
 }
 nav li:hover  {
     background-color: var(--secondary);

@@ -17,3 +17,8 @@ fondoPort.addEventListener('mouseleave', () => {
     face.style.opacity = 1;
     contPort.style.padding = '10vw';
 })
+
+fondoPort.addEventListener('click', () => {
+    window.location.href = './src/pages/home.html';
+    console.log('click')
+})

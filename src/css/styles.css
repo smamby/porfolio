@@ -1,7 +1,7 @@
 :root {
     --primary: rgb(61, 5, 10);
     --secondary: rgb(247, 193, 143);
-    --terciary: rgb(63, 75, 238);
+    --tertiary: rgb(63, 75, 238);
 }
 * {
     margin: 0;
@@ -10,7 +10,7 @@
     font-family: "Lato", sans-serif;;
 }
 html {
-    background-image: linear-gradient(140deg, var(--secondary) 15%, var(--terciary)75%, var(--terciary)10%);
+    background-image: linear-gradient(140deg, var(--secondary) 15%, var(--tertiary)75%, var(--tertiary)10%);
     width: 100vw;
     min-width: 465px;
     height: 100vh;
@@ -19,7 +19,7 @@ html {
 }
 body {
     margin:0 auto;
-    min-width: 60%;
+    min-width: 482px;
     width:1400px;
     height: 100vh;
     background-color: rgba(235, 176, 13, 0.158);
@@ -49,7 +49,7 @@ body {
     left: 20%;
     border-radius: 3em;
     border: 0.1em solid rgba(243, 247, 5, 0.301);
-    padding: 10vw;    
+    padding: 10vh 10vw;    
     overflow: hidden;
     justify-content: space-between;
     transition: padding 0.8s ease;    
@@ -64,19 +64,10 @@ body {
 }
 #header {
     display: flex;
+    justify-content: space-between;
 }
-.cabezal {
-    display: inline-block;
-    width: 15%;
-    margin: 0.1em 0;
-    border: 1px solid var(--primary);
-}
-.cabezal:nth-child(1) {
-    border-left: none;
-}
-.cabezal:nth-last-child(1) {
-    border-right: none;
-}
+
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -97,27 +88,31 @@ nav li {
     list-style: none;
     flex-grow: 1;
     flex-flow: 10px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--tertiary);
     padding: 0.3rem;
     margin: 2px;
     align-items: center;
     box-sizing: border-box;
 }
+nav li a {
+    color: var(--tertiary);
+}
 nav li:hover  {
-    background-color: var(--terciary);
+    background-color: var(--secondary);
+    border: 1px solid var(--tertiary);
     transition: 0.4s;
         a { 
-            color: var(--secondary);
+            color: var(--tertiary);
             transition: 0.4s;          
         }
 }
 nav li:active  {
-    background-color: var(--terciary);
-    outline: 2px var(--primary) solid;
+    background-color: var(--tertiary);
+    outline: 2px var(--secondary) solid;
     transition: 0.3s;
 }
 nav li:active a { 
-    color: var(--primary);    
+    color: var(--secondary);    
 }
 a {
     color: var(--font-color-nav);
@@ -128,9 +123,13 @@ a {
 
 
 /*|||||||||||||||| MEDIA QUERIES |||||||||||||||||*/
-
-/* Teléfonos grandes */
-@media (min-width: 481px) and (max-width: 767px) {
+/* Teléfonos chico */
+@media (max-width: 481px) {
+    body {
+        min-width: 481px;
+        width: 92vw;
+        
+    }
     #cont-portada , #fondo-portada {
         width: 92vw;
         left: 3%;
@@ -138,16 +137,39 @@ a {
     #face , #faceBlur {
         left: -20%;
     }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
+    }
+}
+/* Teléfonos grandes */
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    #cont-portada , #fondo-portada {
+        width: 92vw;
+        left: 3%;
+    }
+    #face , #faceBlur {
+        left: -20%;
+    }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
+    }
 }
 
 /* Tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
     #cont-portada, #fondo-portada {
         width: 87vw;
-        left: 3%;
+        left: 5%;
     }
     #face , #faceBlur {
         left: -10%;
+    }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
     }
 }
 
@@ -160,6 +182,10 @@ a {
     #face , #faceBlur {
         left: 5%;
     }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
+    }
 }
 /* Tabletas y Portátiles grandes */
 @media (min-width: 1401px) and (max-width: 1800px) {
@@ -170,14 +196,22 @@ a {
     #face , #faceBlur {
         left: 12%;
     }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
+    }
 }
 /* Pantallas grandes */
 @media (min-width: 1801px) {
     #cont-portada, #fondo-portada  {
-        width: 65vw;
-        left: 15%;
+        width: 60vw;
+        left: 20%;
     }
     #face , #faceBlur {
         left: 20%;
+    }
+    nav {
+        width: 70vw;
+        margin: 0 15vw;
     }
 }

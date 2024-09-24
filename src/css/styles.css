@@ -15,7 +15,7 @@
 html {
     background-image: linear-gradient(140deg, var(--secondary) 15%, var(--tertiary)75%, var(--tertiary)10%);
     width: 100vw;
-    min-width: 465px;
+    min-width: 480px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,26 +41,50 @@ body {
     opacity: 1;
     z-index: 5;
 }
+bodier {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+    align-items: end;
+    width: 20%;
+    height: 85vh;
+    margin: 5vh 0;
+    padding: 10% 1%;
+    border-radius: 3em;
+    /* border: 0.1em solid rgba(243, 247, 5, 0.301); */
+    /* background-image: linear-gradient(320deg, rgba(236, 224, 213, 0.2) 20%, rgba(240, 127, 164, 0.3)80%);
+    mix-blend-mode: luminosity; */
+    background-color: none;
+    z-index: 6;
+}
 #fondo-portada {
     display: flex;
     flex-direction: column;
     min-width: 400px;
-    width: 80vw;
+    width: 78%;
     height: 85vh;
-    position:absolute;
+    margin: 5vh 1vw auto 0;
+    /* position:absolute;
     top: 10%;
-    left: 20%;
+    left: 20%; */
     border-radius: 3em;
     border: 0.1em solid rgba(243, 247, 5, 0.301);
     padding: 10vh 10vw;    
     overflow: hidden;
-    justify-content: space-between;
-    transition: padding 0.8s ease;    
+    justify-content: space-between;    
     box-sizing: border-box;
     background-image: linear-gradient(320deg, rgba(236, 224, 213, 0.2) 20%, rgba(240, 127, 164, 0.3)80%);
     mix-blend-mode: luminosity;
-    border-radius: 3em;
-    border: 0.1em solid rgba(243, 247, 5, 0.301);
     z-index: 6;
     transition: padding 0.8s ease;
     pointer-events: auto;
@@ -132,13 +156,19 @@ a {
 /* Teléfonos chico */
 @media (max-width: 481px) {
     body {
-        min-width: 481px;
-        width: 92vw;
-        
+        min-width: 480px;   
+        width: 100vw;     
     }
-    #cont-portada , #fondo-portada {
-        width: 92vw;
-        left: 3%;
+    bodier {
+        width: 100%;
+        margin: 0;
+    }
+    aside {
+        display: none;
+    }
+    #fondo-portada {
+        width: 92%;
+        margin: 5vh auto;
     }
     #face , #faceBlur {
         left: -20%;
@@ -150,10 +180,19 @@ a {
 }
 /* Teléfonos grandes */
 @media (min-width: 481px) and (max-width: 767px) {
-    
-    #cont-portada , #fondo-portada {
-        width: 92vw;
-        left: 3%;
+    body {  
+        width: 100vw;     
+    }
+    bodier {
+        width: 100%;
+        margin: 0;
+    }
+    #fondo-portada {
+        width: 92%;
+        margin: 5vh auto;
+    }
+    aside {
+        display: none;
     }
     #face , #faceBlur {
         left: -20%;
@@ -166,9 +205,19 @@ a {
 
 /* Tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
-    #cont-portada, #fondo-portada {
-        width: 87vw;
-        left: 5%;
+    body {  
+        width: 100vw;     
+    }
+    bodier {
+        width: 100%;
+        margin: 0;
+    }
+    #fondo-portada {
+        width: 92%;
+        margin: 5vh auto;
+    }
+    aside {
+        display: none;
     }
     #face , #faceBlur {
         left: -10%;
@@ -181,9 +230,18 @@ a {
 
 /* Tabletas y Portátiles pequeños */
 @media (min-width: 1025px) and (max-width: 1400px) {
-    #cont-portada, #fondo-portada  {
-        width: 82vw;
-        left: 8%;
+    body {  
+        width: 100vw;     
+    }
+    bodier {
+        width: 100%;
+        margin: 0;
+    }
+    #fondo-portada  {
+        width: 78%; 
+    }
+    aside {
+        width: 20%
     }
     #face , #faceBlur {
         left: 5%;
@@ -195,10 +253,7 @@ a {
 }
 /* Tabletas y Portátiles grandes */
 @media (min-width: 1401px) and (max-width: 1800px) {
-    #cont-portada, #fondo-portada  {
-        width: 75vw;
-        left: 12%;
-    }
+    
     #face , #faceBlur {
         left: 12%;
     }
@@ -209,9 +264,9 @@ a {
 }
 /* Pantallas grandes */
 @media (min-width: 1801px) {
-    #cont-portada, #fondo-portada  {
-        width: 60vw;
-        left: 20%;
+    #fondo-portada  {
+        
+        
     }
     #face , #faceBlur {
         left: 20%;

@@ -7,7 +7,6 @@ const navbar = `<nav>
             </nav>`;
 
 
-//function navbarMount() {
-    const contHeader = document.getElementById('header')
-    contHeader.innerHTML = navbar
-//}
+
+const contHeader = document.getElementById('header')
+contHeader.innerHTML = navbar

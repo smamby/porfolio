@@ -34,7 +34,7 @@ body {
     height: 75vh;
     width:auto;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 20%;
     mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
     pointer-events: none;
@@ -45,6 +45,7 @@ bodier {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: calc(100% - 35px);
     margin: 0 auto;
     justify-content: space-evenly;
     gap: 1vw;
@@ -93,12 +94,11 @@ aside {
     display: flex;
     justify-content: space-between;
 }
-
-
 nav {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
+    height: 35px;
     margin: 0 auto;
 }
 nav > ul {

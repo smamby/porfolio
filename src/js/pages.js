@@ -32,8 +32,5 @@ github.addEventListener('click', () => {
 ing.addEventListener('click', () => {
     console.log('instagram');
     window.open('https://www.instagram.com/seba.mamby', '_blank');
-})
+});
 
-function openMail() {
-    
-}

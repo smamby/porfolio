@@ -5,6 +5,9 @@
     --cuarto: rgb(231, 123, 173);
     --quinto: rgb(180, 211, 131);
     --sexto: rgb(110, 186, 236);
+    --adaptativo: #ee6b92;
+    --adaptativo2: #69bdee;
+    --adaptativo3: #e2af75;
 }
 * {
     margin: 0;
@@ -66,6 +69,10 @@ nav li {
     list-style: none;
     flex-grow: 1;
     flex-flow: 10px;
+    background: linear-gradient(90deg, var(--adaptativo) 0%, var(--adaptativo) 50% ,rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0%;
+    /* transition: background-position 0.4s ease; */
     border: 1px solid var(--tertiary);
     padding: 0.3rem;
     margin: 2px;
@@ -79,13 +86,17 @@ nav li a {
     text-align: center;
 }
 nav li:hover  {
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
+    background-position: 0% 0%;
     border: 1px solid var(--tertiary);
-    transition: 0.4s;
+    transition: 0.3s;
         a { 
-            color: var(--tertiary);
+            color: white;
             transition: 0.4s;          
         }
+}
+nav li.selected {
+    pointer-events: none;
 }
 nav li:active  {
     background-color: var(--tertiary);
@@ -99,6 +110,9 @@ a {
     color: var(--font-color-nav);
     text-decoration: none;
     font-weight: 400;
+}
+aside h3:hover {
+    color:white
 }
 bodier {
     display: flex;
@@ -140,7 +154,7 @@ aside {
     left: 20%; */
     border-radius: 3em;
     border: 0.1em solid rgba(243, 247, 5, 0.301);
-    padding: 10vh 10vw;    
+    padding: 10vh 8vw;    
     overflow: hidden;
     justify-content: space-between;    
     box-sizing:border-box;
@@ -148,7 +162,15 @@ aside {
     mix-blend-mode: luminosity;
     z-index: 6;
     transition: padding 0.8s ease;
-    pointer-events: auto;
+    pointer-events: auto;    
+}
+.cont-text {
+    height: 100%;
+    overflow: auto;
+    padding-right: 5rem;
+}
+p {
+    font-size: 18px;
 }
 .sec-home {
     display: flex;
@@ -174,7 +196,7 @@ footer {
     margin-right: 2vw;
 } */
 .soc-net:hover {
-    filter: invert(1) sepia(1) saturate(100%) hue-rotate(180deg);
+    filter: invert(1);
 }
 
 

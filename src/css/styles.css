@@ -172,9 +172,8 @@ aside {
     overflow: auto;
     padding-right: 5rem;
 }
-.cont-text > p {
-    font-size: 1.5rem;
-    color:red;
+.cont-text > article > p {
+    font-size: 22px;
 }
 .sec-home {
     display: flex;
@@ -250,6 +249,9 @@ footer {
     nav {
         width: 70vw;
         margin: 0 15vw;
+    }
+    .cont-text {
+        padding-right: 2rem;
     }
 }
 

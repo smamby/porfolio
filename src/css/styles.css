@@ -34,7 +34,7 @@ body {
     padding-top: 2vh;
 }
 
-#faceBlur{
+#faceBlur, #face{
     height: 75vh;
     width:auto;
     position: absolute;
@@ -150,6 +150,10 @@ aside {
 #indice {
     margin-top: 8px;
 }
+#aside-home {
+    justify-content: end;
+    color: aliceblue;
+}
 #fondo-portada {
     display: flex;
     flex-direction: column;
@@ -173,6 +177,32 @@ aside {
     transition: padding 0.8s ease;
     pointer-events: auto;    
 }
+#fondo-portada-home {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    width: 78%;
+    /* height: 85vh; */
+    height: auto;
+    margin: 5vh 1vw 1vh 0;
+    /* position:absolute;
+    top: 10%;
+    left: 20%; */
+    border-radius: 3em;
+    border: 0.1em solid rgba(243, 247, 5, 0.301);
+    padding: 10vh 8vw;    
+    overflow: hidden;
+    /* justify-content: space-between;     */
+    box-sizing:border-box;
+    background-image: linear-gradient(320deg, rgba(250, 244, 238, 0.2) 20%, rgba(170, 160, 164, 0.3)80%);
+    /* mix-blend-mode: luminosity; */
+    z-index: 6;
+    transition: padding 0.8s ease;
+    pointer-events: auto; 
+    padding-right: 2vw !important;
+    padding-bottom: 4vh !important;   
+}
+
 #fondo-works {
     display: flex;
     flex-direction: column;
@@ -201,8 +231,67 @@ aside {
     overflow: auto;
     padding-right: 5rem;
 }
+cont-text-home {
+    height: 100%;
+    padding-right: 0 !important;
+}
 .cont-text > article > p {
     font-size: 22px;
+}
+#hi {
+    color: aliceblue;
+    font-size: 60px;
+}
+#sm {
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+#think {
+    font-size: 1.5rem;
+    margin-left: 36%;
+    text-align: end;
+}
+b {
+    color: aliceblue;
+    font-size: 1.7rem;
+}
+.cont-pic {
+    display: flex;
+    flex-direction: row;
+    margin: 4% 0 auto auto;
+    width: 30vw;
+    height: 20vh;
+    background-color: rgba(255, 253, 253, 0.15);
+    padding: 16px;
+    justify-content: space-between;
+    border-radius: 0 0 36px 0;
+    gap: 16px;
+}
+.pic1 {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/pics/cht1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.pic2 {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/pics/cht2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.pic3 {
+    
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/pics/cht3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
 }
 .cont-screen {
     display: flex;
@@ -296,6 +385,10 @@ footer {
     #fondo-portada {
         width: 92%;
     }
+    #fondo-portada-home {
+        width: 92%;
+        padding-top: 5vh;
+    }
     #face , #faceBlur {
         left: -20%;
     }
@@ -303,7 +396,30 @@ footer {
         width: 70vw;
         margin: 0 15vw;
     }
+    #think {
+        font-size: 1rem;
+        margin-left: 18%;
+        text-align: end;
+    }
+    b {
+        font-size: 1.1rem;
+    }
+    #hi {
+        text-align: right;
+        font-size: 2rem;
+    }
+    #sm {
+        text-align: right;
+        font-size: 3rem;
+    }
+    .pic2 {
+        display: none;
+    }
+    .pic3 {
+        display: none;
+    }
 }
+
 /* Teléfonos grandes */
 @media (min-width: 481px) and (max-width: 767px) {
     body {  
@@ -315,6 +431,10 @@ footer {
     }
     #fondo-portada {
         width: 92%;
+    }
+    #fondo-portada-home {
+        width: 92%;
+        padding-top: 5vh;
     }
     aside {
         display: none;
@@ -328,6 +448,28 @@ footer {
     }
     .cont-text {
         padding-right: 2rem;
+    }
+    #think {
+        font-size: 1.1rem;
+        margin-left: 18%;
+        text-align: end;
+    }
+    b {
+        font-size: 1.2rem;
+    }
+    #hi {
+        text-align: right;
+        font-size: 2rem;
+    }
+    #sm {
+        text-align: right;
+        font-size: 3rem;
+    }
+    .pic2 {
+        display: none;
+    }
+    .pic3 {
+        display: none;
     }
 }
 
@@ -343,6 +485,10 @@ footer {
     #fondo-portada {
         width: 92%;
     }
+    #fondo-portada-home {
+        width: 92%;
+        padding-top: 5vh;
+    }
     aside {
         display: none;
     }
@@ -352,6 +498,23 @@ footer {
     nav {
         width: 70vw;
         margin: 0 15vw;
+    }
+    #think {
+        font-size: 1.4rem;
+        margin-left: 18%;
+        text-align: end;
+    }
+    b {
+        font-size: 1.6rem;
+    }
+    #hi {
+        text-align: right;
+    }
+    #sm {
+        text-align: right;
+    }
+    .pic3 {
+        display: none;
     }
 }
 
@@ -378,6 +541,12 @@ footer {
     nav {
         width: 70vw;
         margin: 0 15vw;
+    }
+    
+    #think {
+        font-size: 1.7rem;
+        margin-left: 18%;
+        text-align: end;
     }
 }
 /* Tabletas y Portátiles grandes */

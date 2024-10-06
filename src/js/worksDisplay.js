@@ -23,24 +23,45 @@ const arrAppWebEstatic = [
 const ctrlC = document.getElementsByClassName('ctrlC');
 const imgC = document.getElementById('imgC');
 const arrAppMovile = [
-    
+    '../assets/works/kotlinA.png',
+    '../assets/works/kotlinB.png',
+    '../assets/works/kotlinC.png',
+    '../assets/works/kotlinD.png',
+    '../assets/works/kotlinE.png',
+]
+
+// ALGEBRA LINEAL
+const ctrlE = document.getElementsByClassName('ctrlE');
+const imgE = document.getElementById('imgE');
+const arrArgLin = [
+    '../assets/works/python_alg_lin_3incogA.png',
+    '../assets/works/python_alg_lin_3incogB.png'
 ]
 
 
 
-let i = 0;
+var i = 0;
+var ctrlAct = '';
 function cambiarImagenUniv(event, img, arrayImg, ctrl1, ctrl2) {
     const elemento = event.target;
-    
-    console.log(elemento.id)
-    console.log(arrayImg.length)
+    console.log('ctrlActOld: ', ctrlAct);
+    console.log('ctrlActNew: ',elemento.id.slice(-1));
+    console.log('a lenght: ',arrayImg.length);
+    console.log('if1 i: ',i);
+    if (elemento.id.slice(-1) != ctrlAct) {
+        ctrlAct = elemento.id.slice(-1);
+        i = 0;
+        img.src = arrayImg[0];        
+    };
+    console.log('if2 i: ',i);
     if (elemento.id == ctrl1 && i>0) {
         i -= 1;
     } else if (elemento.id == ctrl2 && i<arrayImg.length-1) {
         i += 1;
-    }
-    console.log(i);
-    console.log(arrayImg[i])
+    };
+    
+    console.log('i3: ',i);
+    console.log(arrayImg[i]);
     img.src = arrayImg[i];
 }
 
@@ -58,4 +79,8 @@ for (let control of ctrlC) {
     control.addEventListener('click',
          (event) => cambiarImagenUniv(event,imgC,
             arrAppMovile, 'ctrl1C', 'ctrl2C'));
+}
+for (let control of ctrlE) {
+    control.addEventListener('click',
+         (event) => cambiarImagenUniv(event,imgE, arrArgLin, 'ctrl1E', 'ctrl2E'));
 }

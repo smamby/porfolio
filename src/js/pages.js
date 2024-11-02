@@ -48,16 +48,13 @@ ing.addEventListener('click', () => {
 
 
 // AMPLIAR IMAGENES home
-const images = Array.from(document.getElementsByClassName('pic'));
-console.log(images)
-for (let image of images) {
-    image.addEventListener('click', (event) => {
+const imagenes = Array.from(document.getElementsByClassName('pic'));
+console.log(imagenes)
+for (let imagen of imagenes) {
+    imagen.addEventListener('click', () => {
         const width = screen.width * 0.6;
-        const ratio = width / image.naturalWidth;
-        const height = image.naturalHeight * ratio;
-        window.open(image.src, '_blank', `width=${width},height=${height}`);
-        if (event.target !== image) {
-            window.close(); // Cierra la ventana emergente
-        }
+        const ratio = width / imagen.naturalWidth;
+        const height = imagen.naturalHeight * ratio;
+        window.open(imagen.src, '_blank', `width=${width},height=${height}`);
     })
 }

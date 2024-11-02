@@ -301,7 +301,7 @@ b {
     justify-content: center;
     width: 80%;
     height: auto;
-    
+    cursor: pointer;
 }
 .screen > img {
     width: 90%;
@@ -313,6 +313,7 @@ b {
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-right: 40px solid #ffffff;
+    cursor: pointer;
 }
 .ctrl2 {
     width: 0;
@@ -321,6 +322,7 @@ b {
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 40px solid #ffffff;
+    cursor:pointer;
 }
 .ctrl1:hover {
     border-right: 40px solid var(--secondary);

@@ -1,0 +1,38 @@
+#face {
+    z-index: 7;
+}
+#aside-home {
+    z-index: 8;
+}
+.home > h1{
+    z-index: 9;
+}
+#sobre-img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    width: 78%;
+    /* height: 85vh; */
+    height: auto;
+    margin: 5vh 1vw 1vh 0;
+    /* position:absolute;
+    top: 10%;*/
+    left: 29.7%; 
+    /* border-radius: 3em;
+    border: 0.1em solid rgba(243, 247, 5, 0.301); */
+    padding: 10vh 8vw;    
+    overflow: hidden;
+    /* justify-content: space-between;     */
+    box-sizing:border-box;
+    
+    /* mix-blend-mode: luminosity; */
+    z-index: 7;
+    transition: padding 0.8s ease;
+    pointer-events: auto; 
+    padding-right: 2vw !important;
+    padding-bottom: 4vh !important;   
+}
+/* .pic {
+    pointer-events: auto;
+} */

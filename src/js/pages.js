@@ -2,23 +2,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const pathname = window.location.pathname;
     const fondo = document.documentElement;
     
-    if(pathname.includes('home')) {
-        console.log('home');
+    if(pathname.includes('index')) {
+        console.log('inicio');
         fondo.style.backgroundImage = `linear-gradient(140deg, var(--cuarto) 15%, var(--quinto)75%, var(--quinto)10%)`;
         document.getElementsByTagName('li')[0].style.backgroundColor = 'rgba(255,255,255,0.3';
         document.getElementsByTagName('li')[0].classList.add('selected');
         document.documentElement.style.setProperty('--adaptativo', '#ee6b92')
+    } else if (pathname.includes('home')) {
+        console.log('home');
+        fondo.style.backgroundImage = `linear-gradient(140deg, var(--cuarto) 15%, var(--quinto)75%, var(--quinto)10%)`;
+        document.getElementsByTagName('li')[1].style.backgroundColor = 'rgba(255,255,255,0.3';
+        document.getElementsByTagName('li')[1].classList.add('selected');
+        document.documentElement.style.setProperty('--adaptativo', '#ee6b92')
     } else if (pathname.includes('sobremi')) {
         console.log('sobre mi');
         fondo.style.backgroundImage = `linear-gradient(140deg, var(--quinto) 15%, var(--sexto)75%, var(--sexto)10%)`;
-        document.getElementsByTagName('li')[1].style.backgroundColor = 'rgba(255,255,255,0.3';
-        document.getElementsByTagName('li')[1].classList.add('selected');
+        document.getElementsByTagName('li')[2].style.backgroundColor = 'rgba(255,255,255,0.3';
+        document.getElementsByTagName('li')[2].classList.add('selected');
         document.documentElement.style.setProperty('--adaptativo', '#69bdee')
     } else if (pathname.includes('conocimientos')) {
         console.log('conocimientos');
         fondo.style.backgroundImage = `linear-gradient(140deg, var(--sexto) 15%, var(--secondary)75%, var(--secondary)10%)`;
-        document.getElementsByTagName('li')[2].style.backgroundColor = 'rgba(255,255,255,0.3';
-        document.getElementsByTagName('li')[2].classList.add('selected');
+        document.getElementsByTagName('li')[3].style.backgroundColor = 'rgba(255,255,255,0.3';
+        document.getElementsByTagName('li')[3].classList.add('selected');
         document.documentElement.style.setProperty('--adaptativo', '#e2af75')
     }
 })
@@ -41,3 +47,17 @@ ing.addEventListener('click', () => {
 });
 
 
+// AMPLIAR IMAGENES home
+const images = Array.from(document.getElementsByClassName('pic'));
+console.log(images)
+for (let image of images) {
+    image.addEventListener('click', (event) => {
+        const width = screen.width * 0.6;
+        const ratio = width / image.naturalWidth;
+        const height = image.naturalHeight * ratio;
+        window.open(image.src, '_blank', `width=${width},height=${height}`);
+        if (event.target !== image) {
+            window.close(); // Cierra la ventana emergente
+        }
+    })
+}

@@ -1,5 +1,6 @@
 const navbar = `<nav>
                 <ul>
+                    <li> <a href="../../index.html">inicio</a> </li>
                     <li> <a href="./home.html">Home</a> </li>
                     <li> <a href="./sobremi.html">Sobre Mi</a> </li>
                     <li> <a href="./conocimientos.html">Conocimiesntos TI</a> </li>

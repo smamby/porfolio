@@ -97,6 +97,5 @@ for (let image of images) {
         const ratio = width / image.naturalWidth;
         const height = image.naturalHeight * ratio;
         window.open(image.src, '_blank', `width=${width},height=${height}`);
-        window.close();
     })
 }

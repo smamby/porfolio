@@ -90,12 +90,10 @@ const images = Array.from(document.getElementsByClassName('openable'));
 console.log(images)
 for (let image of images) {
     image.addEventListener('click', () => {
-        // const height = screen.height;
-        // const ratio = height / image.naturalHeight;
-        // const width = image.naturalWidth * ratio;
-        const width = screen.width * 0.6;
+        const width = image.naturalWidth; //screen.width * 0.55;
         const ratio = width / image.naturalWidth;
         const height = image.naturalHeight * ratio;
-        window.open(image.src, '_blank', `width=${width},height=${height}`);
+        const left = (screen.width/2) - (width/2);
+        window.open(image.src, '_blank', `width=${width},height=${height}, left=${left}`);
     })
 }

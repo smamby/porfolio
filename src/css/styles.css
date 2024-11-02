@@ -112,6 +112,9 @@ a {
     text-decoration: none;
     font-weight: 400;
 }
+aside h3 {
+    transition: color 0.3s ease-in-out;
+}
 aside h3:hover {
     color:white
 }
@@ -338,6 +341,23 @@ b {
 }
 a {
     color:#a0003d;
+    transition: color 0.3s ease-in-out;    
+}
+@keyframes blink {
+    0%, 100% {
+        color: #a0003d;
+        text-shadow: 0 0 9px #ffffff;
+    }
+    50% {
+        color: #fa2b7b;
+        text-shadow: 0 0 9px #ffffff;
+    }
+}
+article a:hover {
+    animation: blink 0.5s infinite;
+    /* color: #b208c2;
+    font-weight: bold;
+    text-shadow: 0 0 9px #ffffff; */
 }
 
 footer {
@@ -354,12 +374,21 @@ footer {
     /* background-color: blue; */
     filter: opacity(0.4);
     cursor: pointer;
+    
 }
-/* .soc-net:nth-last-of-type(1) {
-    margin-right: 2vw;
-} */
+@keyframes blink-soc {
+    0%, 100% {
+        filter: invert(0) opacity(0.4);
+        
+        
+    }
+    50% {
+        filter: invert(1) opacity(0.9);
+    }
+}
+    
 .soc-net:hover {
-    filter: invert(1);
+    animation: blink-soc 1.4s ease-in-out infinite;
 }
 
 

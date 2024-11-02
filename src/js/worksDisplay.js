@@ -84,3 +84,6 @@ for (let control of ctrlE) {
     control.addEventListener('click',
          (event) => cambiarImagenUniv(event,imgE, arrArgLin, 'ctrl1E', 'ctrl2E'));
 }
+
+// AMPLIAR IMAGENES
+const images = document.getElementsByTagName

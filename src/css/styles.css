@@ -359,6 +359,7 @@ footer {
     z-index: 9;
     /* background-color: blue; */
     filter: opacity(0.4);
+    cursor: pointer;
 }
 /* .soc-net:nth-last-of-type(1) {
     margin-right: 2vw;

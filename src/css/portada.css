@@ -173,22 +173,46 @@ body {
 /* Teléfonos grandes */
 @media (min-width: 481px) and (max-width: 767px) {
     #cont-portada , #fondo-portada {
-        width: 85vw;
-        left: 10%;
+        width: 72vw;
+        left: -5%;
     }
     #face , #faceBlur {
-        left: -20%;
+        left: -10%;
+    }
+    #cont-info {    
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 300px;
+        width: 76vw;
+        height: 90vh;
+        position:relative;
+        padding: 3% !important;
+        left: 20%;
     }
 }
 
 /* Tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
     #cont-portada, #fondo-portada {
-        width: 75vw;
-        left: 18%;
+        width: 80%;
+        left: 5%;
     }
     #face , #faceBlur {
-        left: -10%;
+        left: 10%;
+    }
+    #cont-info {    
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 490px;
+        width: 77vw;
+        height: 90vh;
+        position:relative;
+        padding: 3% 6% !important;
+        left: 20%;
     }
 }
 
@@ -229,10 +253,10 @@ body {
 @media (min-width: 1401px) and (max-width: 1800px) {
     #cont-portada, #fondo-portada  {
         width: 50vw;
-        left: 32%;
+        left: -15%;
     }
     #face , #faceBlur {
-        left: 12%;
+        left: 15%;
     }
 }
 /* Pantallas grandes */

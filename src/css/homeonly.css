@@ -2,7 +2,17 @@
     z-index: 7;
 }
 #aside-home {
-    z-index: 8;
+    z-index: 8;    
+}
+#aside-home > h3, #aside-home > h2 {
+    color: rgb(255, 255, 255);
+    transition: color .9s ease-in-out, transform .7s ease-in-out;
+}
+#aside-home > h3:hover, #aside-home > h2:hover{
+    transform: scale(1.1);
+    cursor: cell;
+    color: rgb(233, 225, 119);
+    transition: color .3s ease-in-out, transform .3s ease-in-out;
 }
 .home > h1{
     z-index: 9;
@@ -21,11 +31,10 @@
     left: 29.7%; 
     /* border-radius: 3em;
     border: 0.1em solid rgba(243, 247, 5, 0.301); */
-    padding: 10vh 8vw;    
+    padding: 8vh 8vw;    
     overflow: hidden;
     /* justify-content: space-between;     */
-    box-sizing:border-box;
-    
+    box-sizing:border-box;    
     /* mix-blend-mode: luminosity; */
     z-index: 7;
     transition: padding 0.8s ease;
@@ -49,7 +58,7 @@
     pointer-events: none;
     z-index: 99;
     transition: opacity .6s .9s ease-out;
-    --transform: translateY(-100vh);
+    --transform: translateY(-110vh);
     --transition: transform .8s ease-in-out;
 }
 .modal--show {

@@ -67,18 +67,20 @@ for (let imagen of imagenes) {
     })
 }
 
-imagenes.forEach(el => { 
-    el.addEventListener('mouseenter', () => {
-        distortSect.style.backgroundImage = `url(${el.src})`; 
+imagenes.forEach(imagen => { 
+    imagen.addEventListener('mouseenter', () => {
+        imagen.style.filter = 'saturate(4) brightness(3)';
+        imagen.style.transition = 'filter 20s ease';
+        distortSect.style.backgroundImage = `url(${imagen.src})`; 
         distortSect.style.opacity = 1;
         distortSect.style.transition = 'opacity 40s 8s ease';
     });
 
-    el.addEventListener('mouseleave', () => {
-        el.style.saturate = 1;
-        el.style.transition = 'filter 3s ease';
+    imagen.addEventListener('mouseleave', () => {
+        imagen.style.filter = 'saturate(1) brightness(1)';
+        imagen.style.transition = 'filter 1s ease';
         distortSect.style.opacity = 0;
-        distortSect.style.transition = 'opacity 3s ease';
+        distortSect.style.transition = 'opacity 2s ease';
     });
 })
 

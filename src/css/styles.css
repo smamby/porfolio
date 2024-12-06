@@ -246,10 +246,15 @@ cont-text-home {
 #hi {
     color: aliceblue;
     font-size: 60px;
+    font-weight: 300;
+    font-style: italic;
+    padding-left: 2rem;
 }
 #sm {
-    font-weight: 900;
+    font-family: 'Rubik';
+    font-weight: 700;
     font-size: 4rem;
+    font-style: italic;
 }
 
 #think {
@@ -290,13 +295,13 @@ b {
     cursor: pointer;
 }
 .pic {
-    filter: saturate(1);
-    transition: filter 10s ease;
+    filter: saturate(1) brightness(1);
+    /* transition: filter 20s ease; */
 }
 
-.pic:hover {
-    filter: saturate(10);
-}
+/* .pic:hover {
+    filter: saturate(4) brightness(3);
+} */
 .distortion {
     display: flex;
     background-image: url('../assets/pics/cht1.png');

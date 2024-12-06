@@ -289,6 +289,37 @@ b {
     border-radius: 0 0 30px 0;
     cursor: pointer;
 }
+.pic {
+    filter: saturate(1);
+    transition: filter 10s ease;
+}
+
+.pic:hover {
+    filter: saturate(10);
+}
+.distortion {
+    display: flex;
+    background-image: url('../assets/pics/cht1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    /* transition: opacity 40s 10s ease; */
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+.pic:hover {    
+    .distortion {
+        opacity: 1;
+        transition: opacity 2s ease-in-out;
+    }
+}
 .cont-screen {
     display: flex;
     flex-direction: row;

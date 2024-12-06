@@ -51,6 +51,7 @@ ing.addEventListener('click', () => {
 const imagenes = Array.from(document.getElementsByClassName('pic'));
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
+const distortSect = document.getElementById('distortion');
 
 
 console.log(imagenes)
@@ -61,10 +62,26 @@ for (let imagen of imagenes) {
         // const height = imagen.naturalHeight * ratio;
         // window.open(imagen.src, '_blank', `width=${width},height=${height}`);
         let source = imagen.src;
-        modalImg.src = source;
+        modalImg.src = source;        
         modal.classList.add('modal--show');
     })
 }
+
+imagenes.forEach(el => { 
+    el.addEventListener('mouseenter', () => {
+        distortSect.style.backgroundImage = `url(${el.src})`; 
+        distortSect.style.opacity = 1;
+        distortSect.style.transition = 'opacity 40s 8s ease';
+    });
+
+    el.addEventListener('mouseleave', () => {
+        el.style.saturate = 1;
+        el.style.transition = 'filter 3s ease';
+        distortSect.style.opacity = 0;
+        distortSect.style.transition = 'opacity 3s ease';
+    });
+})
+
 modal.addEventListener('click', () => {
     console.log('modal clicked');
     modal.classList.remove('modal--show');

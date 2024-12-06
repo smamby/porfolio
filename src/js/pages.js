@@ -49,12 +49,24 @@ ing.addEventListener('click', () => {
 
 // AMPLIAR IMAGENES home
 const imagenes = Array.from(document.getElementsByClassName('pic'));
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+
+
 console.log(imagenes)
 for (let imagen of imagenes) {
     imagen.addEventListener('click', () => {
-        const width = screen.width * 0.6;
-        const ratio = width / imagen.naturalWidth;
-        const height = imagen.naturalHeight * ratio;
-        window.open(imagen.src, '_blank', `width=${width},height=${height}`);
+        // const width = screen.width * 0.6;
+        // const ratio = width / imagen.naturalWidth;
+        // const height = imagen.naturalHeight * ratio;
+        // window.open(imagen.src, '_blank', `width=${width},height=${height}`);
+        let source = imagen.src;
+        modalImg.src = source;
+        modal.classList.add('modal--show');
     })
 }
+modal.addEventListener('click', () => {
+    console.log('modal clicked');
+    modal.classList.remove('modal--show');
+    //modalImg.src = '';
+})

@@ -89,3 +89,15 @@ modal.addEventListener('click', () => {
     modal.classList.remove('modal--show');
     //modalImg.src = '';
 })
+
+// margen dinamico para tablets del #think
+// hecho en javascript por la funcion compleja 
+// requerida para un calculo mas ajustado
+
+const pThink = document.querySelector('#think');
+const contText = document.querySelector('.cont-text-home');
+const vw = window.innerWidth;
+const dynamicMargin = (-vw / 3) + (contText.offsetWidth * 0.90);
+console.log(dynamicMargin)
+
+pThink.style.marginLeft = `${dynamicMargin}px`;

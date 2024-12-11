@@ -433,10 +433,21 @@ footer {
 
 /*|||||||||||||||| MEDIA QUERIES |||||||||||||||||*/
 /* Teléfonos chico */
+@media (max-width: 400px) {
+    #cont-faces {
+        left: -70% !important;
+    }
+    #think {
+        margin-left: 36% !important;
+    }
+    #footer {
+        padding-right: calc(2vw );
+    }
+}
 @media (max-width: 481px) {
     body {
-        min-width: 480px;   
-        width: 100vw;     
+        /* min-width: 480px;    */
+        width: 100%;     
     }
     bodier {
         width: 100%;
@@ -467,13 +478,16 @@ footer {
     b {
         font-size: 1.1rem;
     }
+    #sobre-img {
+        left: 10% !important;
+    }
     #hi {
-        text-align: right;
-        font-size: 2rem;
+        text-align: left;
+        font-size: 1.7rem;
     }
     #sm {
-        text-align: right;
-        font-size: 3rem;
+        text-align: left;
+        font-size: 2rem;
     }
     #pic2 {
         display: none;
@@ -481,12 +495,15 @@ footer {
     #pic3 {
         display: none;
     }
+    #footer {
+        padding-right: calc(2vw );
+    }
 }
 
 /* Teléfonos grandes */
 @media (min-width: 481px) and (max-width: 767px) {
     body {  
-        width: 100vw;     
+        width: 100%;     
     }
     bodier {
         width: 100%;

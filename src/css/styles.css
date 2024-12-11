@@ -450,10 +450,10 @@ footer {
     }
     #fondo-portada-home {
         width: 92%;
-        padding-top: 5vh;
+        padding-top: 30vh;
     }
     #face , #faceBlur {
-        left: -20%;
+        left: -40%;
     }
     nav {
         width: 70vw;
@@ -497,7 +497,7 @@ footer {
     }
     #fondo-portada-home {
         width: 92%;
-        padding-top: 5vh;
+        padding-top: 40vh;
     }
     aside {
         display: none;
@@ -520,12 +520,15 @@ footer {
     b {
         font-size: 1.2rem;
     }
+    #sobre-img {
+        left: 17% !important;
+    }
     #hi {
-        text-align: right;
+        text-align: left;
         font-size: 2rem;
     }
     #sm {
-        text-align: right;
+        text-align: left;
         font-size: 3rem;
     }
     #pic2 {

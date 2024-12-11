@@ -101,3 +101,7 @@ const dynamicMargin = (-vw / 3) + (contText.offsetWidth * 0.90);
 console.log(dynamicMargin)
 
 pThink.style.marginLeft = `${dynamicMargin}px`;
+
+console.log(`Logical width: ${window.innerWidth}px`);
+console.log(`Device pixel ratio: ${window.devicePixelRatio}`);
+console.log(`Physical width: ${window.innerWidth * window.devicePixelRatio}px`);

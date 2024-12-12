@@ -186,7 +186,7 @@ aside {
 #fondo-portada-home {
     display: flex;
     flex-direction: column;
-    min-width: 400px;
+    /* min-width: 400px; */
     width: 78%;
     /* height: 85vh; */
     height: auto;
@@ -406,6 +406,9 @@ footer {
     justify-content: end;   
     padding-right: calc(2vw + 3em); 
 }
+.cont-contacto {
+    z-index: 99;
+}
 .soc-net {
     height: 50%;
     margin-right: 16px;
@@ -462,6 +465,9 @@ footer {
     #fondo-portada-home {
         width: 92%;
         padding-top: 30vh;
+    }
+    .cont-text {
+        padding-right: 0;
     }
     #face , #faceBlur {
         left: -40%;
@@ -520,7 +526,7 @@ footer {
         display: none;
     }
     #face , #faceBlur {
-        left: -20%;
+        left: -30%;
     }
     nav {
         width: 70vw;
@@ -538,7 +544,7 @@ footer {
         font-size: 1.2rem;
     }
     #sobre-img {
-        left: 17% !important;
+        left: 6% !important;
     }
     #hi {
         text-align: left;
@@ -546,7 +552,7 @@ footer {
     }
     #sm {
         text-align: left;
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
     #pic2 {
         display: none;
@@ -554,12 +560,18 @@ footer {
     #pic3 {
         display: none;
     }
+    #footer {
+        padding-right: calc(2vw + 3em);
+    }
+    .cont-contacto {
+        z-index: 99;
+    }
 }
 
 /* Tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {  
-        width: 100vw;     
+        width: 100%;     
     }
     bodier {
         width: 100%;
@@ -571,6 +583,9 @@ footer {
     #fondo-portada-home {
         width: 92%;
         
+    }
+    #fondo-works {
+        width: 92%;
     }
     aside {
         display: none;
@@ -609,6 +624,9 @@ footer {
         h2 {
             font-size: 2.6rem;
         }
+    }
+    #footer {
+        padding-right: calc(2vw + 3em);
     }
 }
 

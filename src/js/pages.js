@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const pathname = window.location.pathname;
-    const fondo = document.documentElement;
-    
+const pathname = window.location.pathname;
+const fondo = document.documentElement;
+
+document.addEventListener('DOMContentLoaded', () => {    
     if(pathname.includes('index')) {
         console.log('inicio');
         fondo.style.backgroundImage = `linear-gradient(140deg, var(--cuarto) 15%, var(--quinto)75%, var(--quinto)10%)`;
@@ -87,20 +87,20 @@ imagenes.forEach(imagen => {
 modal.addEventListener('click', () => {
     console.log('modal clicked');
     modal.classList.remove('modal--show');
-    //modalImg.src = '';
 })
 
 // margen dinamico para tablets del #think
 // hecho en javascript por la funcion compleja 
 // requerida para un calculo mas ajustado
-
-const pThink = document.querySelector('#think');
-const contText = document.querySelector('.cont-text-home');
-const vw = window.innerWidth;
-const dynamicMargin = (-vw / 3) + (contText.offsetWidth * 0.90);
-console.log(dynamicMargin)
-
-pThink.style.marginLeft = `${dynamicMargin}px`;
+if (pathname.includes('home')) {
+    const pThink = document.querySelector('#think');
+    const contText = document.querySelector('.cont-text-home');
+    const vw = window.innerWidth;
+    const dynamicMargin = (-vw / 3) + (contText.offsetWidth * 0.90);
+    console.log(dynamicMargin)
+    
+    pThink.style.marginLeft = `${dynamicMargin}px`;
+}
 
 console.log(`Logical width: ${window.innerWidth}px`);
 console.log(`Device pixel ratio: ${window.devicePixelRatio}`);

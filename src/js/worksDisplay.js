@@ -88,12 +88,22 @@ for (let control of ctrlE) {
 // AMPLIAR IMAGENES
 const images = Array.from(document.getElementsByClassName('openable'));
 console.log(images)
+// const modal = document.getElementById('modal');
+// const modalImg = document.getElementById('modal-img');
 for (let image of images) {
     image.addEventListener('click', () => {
-        const width = image.naturalWidth; //screen.width * 0.55;
-        const ratio = width / image.naturalWidth;
-        const height = image.naturalHeight * ratio;
-        const left = (screen.width/2) - (width/2);
-        window.open(image.src, '_blank', `width=${width},height=${height}, left=${left}`);
+        // const width = image.naturalWidth;
+        // const ratio = width / image.naturalWidth;
+        // const height = image.naturalHeight * ratio;
+        // const left = (screen.width/2) - (width/2);
+        // window.open(image.src, '_blank', `width=${width},height=${height}, left=${left}`);
+        let source = image.src;
+        modalImg.src = source;        
+        modal.classList.add('modal--show');
     })
 }
+
+modal.addEventListener('click', () => {
+    console.log('modal clicked');
+    modal.classList.remove('modal--show');
+})
